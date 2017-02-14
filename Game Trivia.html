@@ -1,0 +1,168 @@
+<!DOCTYPE>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="info.css">
+	<script type="text/javascript">
+		function answer(){
+			var radio = document.getElementsByName("trivia1"); 
+			var selection = false; 
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "dbz" && radio[i].checked
+				 == true) { 
+				selection = true; 
+			} //end if statement 
+		} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>You are correct!! That was the first Dragon Ball game to come out!!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope!! That wasn't the first Dragon Ball game to come out! Try again and you might get it!!</p></b>"; 
+			}
+			document.getElementById("response").innerHTML = message;
+
+}//end function answer
+
+		function right(){
+			var radio = document.getElementsByName("trivia2"); 
+			var selection = false; 
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "right" && radio[i].checked
+				 == true) { 
+				selection = true; 
+			} //end if statement 
+		} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>That was the very first video game console!! Good Job!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope!! Try again!!</p></b>"; 
+			}
+			document.getElementById("answer").innerHTML = message;
+
+}//end function answer
+		
+		function cool(){
+			var radio = document.getElementsByName("trivia3"); 
+			var selection = false; 
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "allright" && radio[i].checked
+				 == true) { 
+				selection = true; 
+			} //end if statement 
+		} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>That was when the first video game console came out!! Good Job!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope!! Try again!!</p></b>"; 
+			}
+			document.getElementById("Submit").innerHTML = message;
+
+}//end function answer
+			function hi(){
+			var radio = document.getElementsByName("trivia5"); 
+			var selection = false; 
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "g" && radio[i].checked
+				 == true) { 
+				selection = true; 
+			} //end if statement 
+		} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>Nice!! You completed the quiz!! Now click home to go back to the homepage.</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope!! Try again!!</p></b>"; 
+			}
+			document.getElementById("hi").innerHTML = message;
+
+}//end function answer
+			function yes(){
+			var radio = document.getElementsByName("trivia4"); 
+			var selection = false; 
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "yes" && radio[i].checked
+				 == true) { 
+				selection = true; 
+			} //end if statement 
+		} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>Nice!! Advance to the final question!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope!! Try again!!</p></b>"; 
+			}
+			document.getElementById("go").innerHTML = message;
+
+}//end function answer
+	</script>
+	<title>Video Game Trivia</title>
+</head>
+<body id="background">
+	<center><h1>Game Trivia</h1></center>
+	<h2><a href="https:ilovecoding0000.github.io" target="new">Home</a></h2>
+	<style type="text/css">
+		</style>
+	<div class="whole">
+		<div class="first">
+			<form>
+				<p><h2>What was the very first <span>Dragon Ball game</span> to ever come out?</h1></p>
+				<div id="response"></div>
+				<input type="radio" name="trivia1" value="dbz">Dragon Ball: Dragon Daihikyō<br>
+				<input type="radio" name="trivia1" value="early">Dragon Ball 3: Goku Den<br>
+				<input type="radio" name="trivia1" value="2nd">Dragon Ball Z: Super Butōden 2<br>
+				<input type="radio" name="trivia1" value="no">Dragon Ball: Shenlong no Nazo<br>
+				<input type="button" value="Submit" onclick="answer()">
+			</form>
+			<form id="move">
+				<p><h3>What was <span>very first</span> video game console?</h3></p>
+				<div id="answer"></div>
+				<input type="radio" name="trivia2" value="wrong">Atari PONG<br>
+				<input type="radio" name="trivia2" value="wrong">Nintendo Entertainment System<br>
+				<input type="radio" name="trivia2" value="wrong">Nintendo 64<br>
+				<input type="radio" name="trivia2" value="right">Magnavox Odyssey 100<br>
+				<input type="button" value="Submit" onclick="right()">
+			</form>
+			<p style="color:green">So far so good! Keep it up!! <span style="color:red"><b>Unless you got the ones above wrong. In that case, you should review a little bit!!</span></b></p>
+			<form>
+				<h2><p>What <span>year</span> did the <span>first</span> video game console come out?</p></h2>
+				<div id="Submit"></div>
+				<input type="radio" name="trivia3" value="get">1956<br>
+				<input type="radio" name="trivia3" value="get">1970<br>
+				<input type="radio" name="trivia3" value="allright">1975<br>
+				<input type="radio" name="trivia3" value="get">2000<br>
+				<input type="button" value="Submit" onclick="cool()">
+			</form>
+			<form>
+				<h2><p>What gaming computer was released in <span>1951?</span></p></h2>
+				<div id="go"></div>
+				<input type="radio" name="trivia4" value="p">HP<br>
+				<input type="radio" name="trivia4" value="g">NVIDIA Shield<br>
+				<input type="radio" name="trivia4" value="yes">Nimrod<br>
+				<input type="radio" name="trivia4" value="l">AMD Computer<br>
+				<input type="button" value="Submit" onclick="yes()">
+			</form>
+			<form>
+				<h2><p>Final question also bonus question: What is the best graphics card for gaming?</p></h2>
+				<div id="hi"></div>
+				<input type="radio" name="trivia5" value="p">Nvidia GeForce GTX 1070<br>
+				<input type="radio" name="trivia5" value="g">GeForce Titan X 12GB GDDR5<br>
+				<input type="radio" name="trivia5" value="ko">NVIDIA TITAN X<br>
+				<input type="radio" name="trivia5" value="l">Nvidia GeForce GTX 1060 6GB<br>
+				<input type="button" value="Submit" onclick="hi()">
+			</form>
+		</div>
+	</div>
+	<a href="https://ilovecoding0000.github.io"><h3><footer>Home</footer></h3></a>
+</body>
+</html>
